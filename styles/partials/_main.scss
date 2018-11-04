@@ -96,7 +96,7 @@
 }
 
 .articles__container__content {
-    padding: 100px 80px 150px 50px;
+    padding: 100px 0px 100px 130px;
 
     &__title {
         @include primaryFont(3.2rem, normal);
@@ -104,6 +104,7 @@
     }
 
     &__text {
+        @include secondaryFont;
         margin-bottom: 30px;
     }
 
@@ -116,7 +117,7 @@
     }
 
     &--pushed {
-        padding: 0 80px 150px 50px;
+        padding: 0px 80px 150px 50px;
     }
 }
 
@@ -129,26 +130,26 @@
     position: absolute;
     top: -60px;
     width: 100%;
-    box-shadow: 20px 20px 0 #227284,
-                -40px 20px 0 #227284,
-                -60px 20px 0 #227284,
-                -80px 20px 0 #227284,
-                -100px 20px 0 #227284,
-                -120px 20px 0 #227284,
-                -140px 20px 0 #227284,
-                -160px 20px 0 #227284,
-                -180px 20px 0 #227284,
-                -200px 20px 0 #227284,
-                -220px 20px 0 #227284,
-                -240px 20px 0 #227284,
-                -260px 20px 0 #227284,
-                -280px 20px 0 #227284,
-                -300px 20px 0 #227284,
-                -320px 20px 0 #227284,
-                -340px 20px 0 #227284,
-                -3600px 20px 0 #227284,
-                -380px 20px 0 #227284,
-                -400px 20px 0 #227284;
+    box-shadow: 20px 20px 0 #68b0c1,
+                -40px 20px 0 #68b0c1,
+                -60px 20px 0 #68b0c1,
+                -80px 20px 0 #68b0c1,
+                -100px 20px 0 #68b0c1,
+                -120px 20px 0 #68b0c1,
+                -140px 20px 0 #68b0c1,
+                -160px 20px 0 #68b0c1,
+                -180px 20px 0 #68b0c1,
+                -200px 20px 0 #68b0c1,
+                -220px 20px 0 #68b0c1,
+                -240px 20px 0 #68b0c1,
+                -260px 20px 0 #68b0c1,
+                -280px 20px 0 #68b0c1,
+                -300px 20px 0 #68b0c1,
+                -320px 20px 0 #68b0c1,
+                -340px 20px 0 #68b0c1,
+                -3600px 20px 0 #68b0c1,
+                -380px 20px 0 #68b0c1,
+                -400px 20px 0 #68b0c1;
 }
 
 .articles__container__img--building img {
@@ -175,7 +176,6 @@
                 400px 20px 0 $primaryColor;
 }
 
-
 // info
 
 .info {
@@ -193,10 +193,6 @@
         padding: 150px 0 100px 0;
     }
 
-    &__container__img {
-        box-shadow: 20px 20px #227284;
-    }
-
     &__container__content {
         padding-left: 140px;
 
@@ -206,7 +202,7 @@
 
         &__text {
             @include secondaryFont;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         &__btn {
@@ -216,19 +212,25 @@
 }
 
 .info__container__img img {
+    box-shadow: 20px 20px 0 #227284;
     display: block;
 }
 
 // gallery
 
-.gallery__flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 50px 0;
-
+.gallery {
     &__item {
-        width: 33.3%;
+        float: left;
+        width: calc((100% - 80px) / 3);
+        margin: 100px 20px;
+    }
+
+    &__item:nth-child(1) {
+        margin-left: -20px;
+    }
+
+    &__item:nth-child(3) {
+        margin-right: -20px;
     }
 }
 
@@ -245,6 +247,107 @@
         padding: 10px 0;
     }
 }
+
+// MEDIA QUERIES
+
+@media(max-width: 1100px) {
+    .about {
+    background: #f6f6f6;
+    text-align: center;
+
+    &__container {
+        float: none;
+        padding: 100px 0px 110px 0px;
+
+        &__title {
+            @include primaryFont(4.2rem, 1);
+            padding-bottom: 30px;
+        }
+
+        &__text {
+            padding-bottom: 30px;
+        }
+
+        &__btn {
+            @include globalBtn;
+        }
+    }
+}
+
+    .articles__container__content {
+        padding: 30px 0px 80px 50px;
+
+        &__title {
+            @include primaryFont(3.2rem, normal);
+            padding-bottom: 20px;
+        }
+
+        &__text {
+            @include secondaryFont;
+            margin-bottom: 30px;
+        }
+
+        &__btn {
+            @include globalBtn;
+        }
+
+        &__btn--right {
+            float: right;
+        }
+
+        &--pushed {
+            padding: 0px 50px 150px 0px;
+        }
+    }
+
+        .info {
+            background: #f6f6f6;
+            position: relative;
+            top: 0px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            z-index: -20;
+
+        &__flex {
+            display: block;
+            padding: 150px 0 100px 0;
+        }
+
+        &__container__content {
+            padding-left: 0px;
+            text-align: center;
+
+            &__title {
+                @include primaryFont(4.2rem, normal);
+                text-align: left;
+            }
+
+            &__text {
+                @include secondaryFont;
+                margin-bottom: 40px;
+                text-align: left;
+            }
+
+            &__btn {
+                @include globalBtn;
+            }
+        }     
+    }
+
+        .info__container__img img {
+            box-shadow: 20px 20px 0 #227284;
+            display: block;
+            float: left;
+            margin-right: 50px;
+            margin-bottom: 20px;
+        }
+}
+
+
+
+
 
 
 
