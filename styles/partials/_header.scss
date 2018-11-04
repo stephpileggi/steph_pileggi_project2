@@ -78,11 +78,11 @@ header {
         display: flex;
         justify-content: space-around;
 
-    &__img {
-        width: 40%;
-        margin-top: 40px;
-        box-shadow: 20px 20px 0 #f6f6f6;
-    }
+        &__img {
+            width: 40%;
+            margin-top: 40px;
+            box-shadow: 20px 20px 0 #f6f6f6;
+        }
 }
 
     .header-container {
@@ -101,6 +101,57 @@ header {
     header {
         background: url(../images/home-image-1-resize.jpg) no-repeat center center;
         width: 100%;
+    }
+
+    h1 {
+        @include primaryFont(8rem, 92px);
+        color: rgba(246, 246, 246, 0.5);
+    }
+
+    // .header-container {
+    //     background: url(../images/circle-text.png) no-repeat;
+    //     background-position: 310px 170px;
+    //     background-size: 100px;
+
+    //     &__heading {
+    //         margin-top: 190px;
+    //     }
+    // }
+
+    .header-content {
+        display: flex;
+        justify-content: center;
+
+        &__heading {
+            padding: 0px 0px;
+        }
+    }
+
+    .header-content img {
+        display: none;
+    }
+
+    .nav__item {
+        margin: 0 2.5%;
+    
+        &__link {
+            @include primaryFont(2rem, 29px);
+            color: #f6f6f6;
+        }
+
+        &--featured {
+            font-size: 4rem;
+        }
+    }
+
+    .nav__item a:hover {
+        color: $accentColor;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav__item--featured {
+        display: none;
     }
 }
 

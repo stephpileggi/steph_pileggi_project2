@@ -226,25 +226,11 @@
     }
 
     &__item:nth-child(1) {
-        margin-left: -20px;
+        margin-left: 0px;
     }
 
     &__item:nth-child(3) {
-        margin-right: -20px;
-    }
-}
-
-// footer
-
-.footer {
-    background: #171717;
-    display: flex;
-    justify-content: center;
-
-    &__copyright {
-        @include secondaryFont;
-        color: #f6f6f6;
-        padding: 10px 0;
+        margin-right: 0px;
     }
 }
 
@@ -252,11 +238,12 @@
 
 @media(max-width: 1100px) {
     .about {
-    background: #f6f6f6;
-    text-align: center;
+        background: #f6f6f6;
+        text-align: center;
 
     &__container {
         float: none;
+        width: 80%;
         padding: 100px 0px 110px 0px;
 
         &__title {
@@ -300,41 +287,41 @@
         }
     }
 
-        .info {
-            background: #f6f6f6;
-            position: relative;
-            top: 0px;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            z-index: -20;
+    .info {
+        background: #f6f6f6;
+        position: relative;
+        top: 0px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        z-index: -20;
 
-        &__flex {
-            display: block;
-            padding: 150px 0 100px 0;
+    &__flex {
+        display: block;
+        padding: 150px 0 100px 0;
+    }
+
+    &__container__content {
+        padding-left: 0px;
+        text-align: center;
+
+        &__title {
+            @include primaryFont(4.2rem, normal);
+            text-align: left;
         }
 
-        &__container__content {
-            padding-left: 0px;
-            text-align: center;
+        &__text {
+            @include secondaryFont;
+            margin-bottom: 40px;
+            text-align: left;
+        }
 
-            &__title {
-                @include primaryFont(4.2rem, normal);
-                text-align: left;
-            }
-
-            &__text {
-                @include secondaryFont;
-                margin-bottom: 40px;
-                text-align: left;
-            }
-
-            &__btn {
-                @include globalBtn;
-            }
-        }     
-    }
+        &__btn {
+            @include globalBtn;
+        }
+    }     
+}
 
         .info__container__img img {
             box-shadow: 20px 20px 0 #227284;
@@ -344,6 +331,131 @@
             margin-bottom: 20px;
         }
 }
+
+@media (max-width: 900px) {
+   .articles__container {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        text-align: center;
+
+        &__img {
+            width: 100%;
+            flex: 1 0 100%;
+        }
+
+        &__content {
+            padding: 0px 0px;
+            width: 100%;
+            flex: 1 0 100%;
+
+            &__btn {
+                float: none;
+            }
+
+            &--pushed {
+                padding: 100px 0px 100px 0px;
+            }
+        }
+    }
+
+    .articles__container__img--surf {
+        order: 1;
+        position: relative;
+        top: 0px;
+    }
+
+    .articles__container--travels {
+        margin: 450px 0 100px 0;
+        order: 2;
+        position: relative;
+    }
+
+    .articles__container__content--pushed {
+        order: 4;
+    }
+
+    .articles__container__img--building {
+        order: 3;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .features__flex {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+}
+
+    .features {
+        padding: 50px 0;
+
+        &__container {
+            display: flex;
+            align-content: center;
+            width: 100%;
+            padding: 25px 0;
+        }
+    }
+
+    .features__container:nth-child(1) {
+        margin-bottom: 0px;
+    }
+
+    .features__container:nth-child(4) {
+        margin-bottom: 50px;
+    }
+
+    .info {
+        &__flex {
+            padding: 100px 0;
+        }
+
+        &__container__content {
+            padding-left: 0px;
+            text-align: center;
+
+            &__title {
+                @include primaryFont(4.2rem, normal);
+                text-align: center;
+            }
+
+            &__text {
+                @include secondaryFont;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+        }
+        
+    .info__container__img img {
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+    }
+
+    .gallery {
+        &__item {
+            float: left;
+            width: (100% / 2);
+            margin: 0px;
+        }
+
+        &__item:nth-child(2) {
+            display: none;
+        }
+    }
+
+    .gallery .wrapper {
+        width: 100%;
+    }
+}
+
+
+
+
+
 
 
 
