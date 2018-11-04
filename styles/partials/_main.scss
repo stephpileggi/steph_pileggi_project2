@@ -1,0 +1,254 @@
+// about
+.about {
+    background: #f6f6f6;
+
+    &__container {
+        float: right;
+        width: 50%;
+        padding: 100px 30px 110px 30px;
+
+        &__title {
+            @include primaryFont(4.2rem, 1);
+            padding-bottom: 30px;
+        }
+
+        &__text {
+            padding-bottom: 30px;
+        }
+
+        &__btn {
+            @include globalBtn;
+        }
+    }
+}
+
+// full width image
+.full-width-img {
+    width: 100%;
+    display: block;
+}
+
+// features
+
+.features__flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.features {
+    background: #f6f6f6;
+    padding: 100px 0 200px 0;
+
+    &__container {
+        display: flex;
+        align-content: center;
+        width: 50%;
+    }
+}
+
+.features-inner-container {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        @include primaryFont(3.2rem, normal);
+        padding-bottom: 20px;
+    }
+
+    &__text {
+        @include secondaryFont;
+        max-width: 550px;
+    }
+}
+
+.fas {
+    background: $primaryColor;
+    padding: 15px 16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.features__container:nth-child(1) {
+    margin-bottom: 60px;
+}
+
+// article
+
+.articles__container {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__img {
+        width: 50%;
+        flex: 0 2 50%;
+    }
+
+    &__content {
+        width: 50%;
+        flex: 0 2 50%;
+    }
+}
+
+.articles__container img {
+    display: block;
+}
+
+.articles__container__content {
+    padding: 100px 80px 150px 50px;
+
+    &__title {
+        @include primaryFont(3.2rem, normal);
+        padding-bottom: 20px;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        @include globalBtn;
+    }
+
+    &__btn--right {
+        float: right;
+    }
+
+    &--pushed {
+        padding: 0 80px 150px 50px;
+    }
+}
+
+.articles__container__img--surf,
+.articles__container__img--building {
+    position: relative;
+}
+
+.articles__container__img--surf img {
+    position: absolute;
+    top: -60px;
+    width: 100%;
+    box-shadow: 20px 20px 0 #227284,
+                -40px 20px 0 #227284,
+                -60px 20px 0 #227284,
+                -80px 20px 0 #227284,
+                -100px 20px 0 #227284,
+                -120px 20px 0 #227284,
+                -140px 20px 0 #227284,
+                -160px 20px 0 #227284,
+                -180px 20px 0 #227284,
+                -200px 20px 0 #227284,
+                -220px 20px 0 #227284,
+                -240px 20px 0 #227284,
+                -260px 20px 0 #227284,
+                -280px 20px 0 #227284,
+                -300px 20px 0 #227284,
+                -320px 20px 0 #227284,
+                -340px 20px 0 #227284,
+                -3600px 20px 0 #227284,
+                -380px 20px 0 #227284,
+                -400px 20px 0 #227284;
+}
+
+.articles__container__img--building img {
+    width: 100%;
+    box-shadow: 20px 20px 0 $primaryColor,
+                40px 20px 0 $primaryColor,
+                60px 20px 0 $primaryColor,
+                80px 20px 0 $primaryColor,
+                100px 20px 0 $primaryColor,
+                120px 20px 0 $primaryColor,
+                140px 20px 0 $primaryColor,
+                160px 20px 0 $primaryColor,
+                180px 20px 0 $primaryColor,
+                200px 20px 0 $primaryColor,
+                220px 20px 0 $primaryColor,
+                240px 20px 0 $primaryColor,
+                260px 20px 0 $primaryColor,
+                280px 20px 0 $primaryColor,
+                300px 20px 0 $primaryColor,
+                320px 20px 0 $primaryColor,
+                340px 20px 0 $primaryColor,
+                360px 20px 0 $primaryColor,
+                380px 20px 0 $primaryColor,
+                400px 20px 0 $primaryColor;
+}
+
+
+// info
+
+.info {
+    background: #f6f6f6;
+    position: relative;
+    top: -60px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: -20;
+
+    &__flex {
+        display: flex;
+        padding: 150px 0 100px 0;
+    }
+
+    &__container__img {
+        box-shadow: 20px 20px #227284;
+    }
+
+    &__container__content {
+        padding-left: 140px;
+
+        &__title {
+            @include primaryFont(4.2rem, normal);
+        }
+
+        &__text {
+            @include secondaryFont;
+            margin-bottom: 30px;
+        }
+
+        &__btn {
+            @include globalBtn;
+        }
+    }     
+}
+
+.info__container__img img {
+    display: block;
+}
+
+// gallery
+
+.gallery__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0;
+
+    &__item {
+        width: 33.3%;
+    }
+}
+
+// footer
+
+.footer {
+    background: #171717;
+    display: flex;
+    justify-content: center;
+
+    &__copyright {
+        @include secondaryFont;
+        color: #f6f6f6;
+        padding: 10px 0;
+    }
+}
+
+
+
+
+
+    
+

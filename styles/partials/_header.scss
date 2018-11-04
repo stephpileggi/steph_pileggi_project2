@@ -1,0 +1,91 @@
+// HOME PAGE HEADER
+
+header {
+    background: $primaryColor;
+    height: 85vh;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.nav__item {
+    margin: 0 2.5%;
+    
+    &__link {
+        @include primaryFont(2rem, 29px);
+    }
+
+    &--featured {
+        font-size: 4rem;
+    }
+
+}
+
+.nav__item a:hover {
+    color: #f6f6f6;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+
+    &__img {
+        width: 40%;
+        margin-top: 40px;
+        box-shadow: 20px 20px 0 #fff;
+    }
+
+    // &__heading {
+    //     width: 60%;
+    //     padding: 10px 100px;
+    //     position: relative;
+    // }
+}
+
+.header-conatiner {
+    background: url(../images/circle-text.png) no-repeat;
+    background-position: 480px 220px;
+    background-size: 200px;
+}
+
+.header-container__heading {
+        width: 60%;
+        padding: 10px 100px;
+        position: relative;
+        margin-top: 320px;
+
+}
+
+// MEDIA QUERIES
+
+// @media (max-width: 1485px) {
+//     h1 {
+//         @include primaryFont(8rem, 92px);
+//     }
+
+//     .header-content {
+//         display: flex;
+//         justify-content: space-between;
+//         align-self: center;
+
+//     &__img {
+//         width: 45%;
+//         margin-top: 40px;
+//         box-shadow: 20px 20px 0 #f6f6f6;
+//         align-self: center;
+//     }
+
+//     &__heading {
+//         width: 55%;
+//         padding-left: 100px;
+//         position: relative;
+//         margin-top: 30vh;
+//     }
+// }
+
+// }
