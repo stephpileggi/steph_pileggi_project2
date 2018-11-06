@@ -13,16 +13,21 @@
 </head>
 
 <body class="body-other">
+<!-- Allows users the ability to get to the main content for your site -->
+    <a href="#maincontent" class="skip-link">Skip to main content.</a>
 <!-- header start -->
     <header class="contact-header other-header__container">
         <nav class="nav other-nav">
-            <ul class="nav__links">
-                <li class="nav__item"><a href="index.html" class="nav__item__link">Home</a></li>
-                <li class="nav__item"><a href="#" class="nav__item__link">About</a></li>
-                <li class="nav__item nav__item--featured nav__item__link">Harper</li>
-                <li class="nav__item"><a href="blog.html" class="nav__item__link">Blog</a></li>
-                <li class="nav__item"><a href="contact.html" class="nav__item__link">Contact</a></li>
-            </ul>
+            <div class="wrapper">
+                <p class="hamburger"><i class="fas fa-bars togMenu"></i></p>
+                <ul class="nav__links">
+                    <li class="nav__item"><a href="index.html" class="nav__item__link nav__item__link--black">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__item__link nav__item__link--black">About</a></li>
+                    <li class="nav__item nav__item--featured nav__item__link nav__item__link--black">Harper</li>
+                    <li class="nav__item"><a href="blog.html" class="nav__item__link nav__item__link--black">Blog</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__item__link nav__item__link--black">Contact</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="wrapper">
             <div class="other-header-content">
@@ -33,7 +38,7 @@
 <!-- header end -->
 
 <!-- main start -->
-    <main>
+    <main id="maincontent">
         <div class="wrapper contact-container">
             <section class="social-aside">
                 <div class="contact-container__aside">
@@ -51,7 +56,7 @@
                 </div>
             </section>
 <!-- contact form -->
-            <section class="global-form">
+            <section class="global-form contact-form">
                 <form action="#" method="POST" name="comment" class="clearfix">
                     <label for="name" class="visuallyhidden">Name</label>
                     <input type="text" class="name" id="name" name="name" placeholder="Name" required>
@@ -70,6 +75,20 @@
         <p class="footer__copyright">Copyright &copy; 2018 HackerYou</p>
     </footer>
 <!-- footer end -->
+<!-- sciprt start -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.hamburger').on('click', function () {
+            $('.nav__links').toggleClass('show');
+        });
+
+        $('.exit-responsive').on('click', function () {
+            $('.nav__links').toggleClass('show');
+        });
+    });
+</script>
 </body>
 
 </html>

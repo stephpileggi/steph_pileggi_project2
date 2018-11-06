@@ -16,6 +16,7 @@
     <header>
         <div class="wrapper">
             <nav class="nav">
+                <p class="hamburger"><i class="fas fa-bars togMenu"></i></p>
                 <ul class="nav__links">
                     <li class="nav__item"><a href="index.html" class="nav__item__link">Home</a></li>
                     <li class="nav__item"><a href="#" class="nav__item__link">About</a></li>
@@ -24,6 +25,7 @@
                     <li class="nav__item"><a href="contact.html" class="nav__item__link">Contact</a></li>
                 </ul>
             </nav>
+
             <div class="header-content clearfix">
                 <img src="images/home-image-1.jpg" class="header-content__img" alt="Overhead shot of a women staring straight up and surronded by balloons">
                 <div class="header-container">
@@ -137,5 +139,21 @@
         <p class="footer__copyright">Copyright &copy; 2018 HackerYou</p>
     </footer>
 <!-- footer end -->
+<!-- sciprt start -->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.hamburger').on('click', function () {
+                $('.nav__links').toggleClass('show');
+            });
+
+            $('.exit-responsive').on('click', function () {
+                $('.nav__links').toggleClass('show');
+            });
+        });
+    </script>
 </body>
 </html>

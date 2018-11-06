@@ -24,8 +24,10 @@ $fontColor: #171717;
     background: $accentColor;
     padding: 10px 33px;
     display: inline-block;
+    &:hover {
+        background: #ee5d5d;
+    }
 }
-
 
 html {
     font-size: 62.5%;

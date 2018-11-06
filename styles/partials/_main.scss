@@ -190,7 +190,7 @@
 
     &__flex {
         display: flex;
-        padding: 150px 0 100px 0;
+        padding: 100px 0;
     }
 
     &__container__content {
@@ -222,7 +222,7 @@
     &__item {
         float: left;
         width: calc((100% - 80px) / 3);
-        margin: 100px 20px;
+        margin: 40px 20px 100px 20px;
     }
 
     &__item:nth-child(1) {
@@ -247,10 +247,6 @@
 
     &__aside {
         flex: 1 1 30%;
-
-        &__container--img {
-
-        }
 
         &__container--about {
             background: #fff;
@@ -296,7 +292,7 @@
 }
 
 .blog {
-    flex: 1 1 70%;
+    flex: 1 1 100%;
     padding-left: 40px;
 
     &__container p{
@@ -413,6 +409,10 @@ textarea:focus {
 
 .global-form {
     flex: 1 1 70%;
+    
+}
+
+.contact-form {
     padding-left: 40px;
 }
 
@@ -422,11 +422,14 @@ textarea:focus {
     font-size: 3.2rem;
 }
 
+.fab:hover {
+    color: $accentColor;
+}
+
 .bold-email {
     @include primaryFont(2.3rem, normal);
     text-transform: lowercase;
 }
-
 
 
 // MEDIA QUERIES
@@ -438,7 +441,7 @@ textarea:focus {
 
     &__container {
         float: none;
-        width: 80%;
+        width: 100%;
         padding: 100px 0px 110px 0px;
 
         &__title {
@@ -517,8 +520,6 @@ textarea:focus {
         }
     }     
 }
-
-
         .info__container__img img {
             box-shadow: 20px 20px 0 #227284;
             display: block;
@@ -526,6 +527,94 @@ textarea:focus {
             margin-right: 50px;
             margin-bottom: 20px;
         }
+
+        .info__flex {
+            padding: 100px 0 100px 0;
+
+        }
+
+        .gallery {
+            &__item {
+            margin: 100px 20px;
+        }
+    }
+
+ // BLOG MEDIA
+
+ .blog {
+     padding-left: 0px;
+ }
+
+.main-blog-flex {
+    flex-direction: column;
+
+    &__aside {
+        flex: 1 1 100%;
+
+        &__container--about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        &__container--text {
+            text-align: center;
+            flex: 1 1 40%;
+            margin: 0 20px;
+        }
+
+        &__container--img {
+            margin: 0 auto;
+            flex: 0 1 40%;
+        }
+
+        &__container--recent {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.aside-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// blog media end
+
+// contact media begins
+// CONTACT PAGE STARTS
+
+.contact-container {
+    flex-direction: column;
+}
+
+.contact-container__aside {
+    text-align: center;
+}
+
+.contact-container__aside p:first-of-type {
+    margin: 20px 0;
+}
+
+.social-aside {
+    flex: 1 1 100%;
+    margin-bottom: 40px;
+}
+
+.global-form {
+    flex: 1 1 100%;    
+}
+
+.contact-form {
+    padding-left: 0px;
+}
+
+.fab {
+    padding: 0 10px;
+}
+// contact ends
 }
 
 @media (max-width: 900px) {
@@ -562,7 +651,7 @@ textarea:focus {
     }
 
     .articles__container--travels {
-        margin: 100px 0 100px 0;
+        margin: 40px 0 100px 0;
         order: 2;
         position: relative;
     }
@@ -647,6 +736,27 @@ textarea:focus {
         width: 100%;
     }
 }
+
+@media (max-width: 500px) {
+    .main-blog-flex {
+
+        &__aside {
+
+            &__container--img {
+                display: none;
+            }
+        }
+    }
+    .main-blog-flex p {
+        font-size: 1.6rem;
+    }
+
+    .aside-btn {
+        font-size: 1.6rem;
+    }
+}
+
+
 
 
 
