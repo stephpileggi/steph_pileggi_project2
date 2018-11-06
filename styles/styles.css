@@ -214,6 +214,11 @@ p {
   margin: 0 auto;
   width: 80%; }
 
+header {
+  background: #b9dde7;
+  height: 95vh;
+  min-height: 650px; }
+
 .nav__links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -242,11 +247,6 @@ p {
 
 .nav__item a:hover {
   color: #f6f6f6; }
-
-header {
-  background: #b9dde7;
-  height: 95vh;
-  min-height: 650px; }
 
 .togMenu {
   float: right;
@@ -399,10 +399,9 @@ header {
     .nav__item--featured {
       font-size: 4rem; }
   .nav__item a:hover {
-    color: #f38d8d; } }
-
-.nav__item__link--black {
-  color: #171717; }
+    color: #f38d8d; }
+  .nav__item__link--black {
+    color: #171717; } }
 
 @media (max-width: 700px) {
   .hamburger {
@@ -429,7 +428,16 @@ header {
     display: block;
     padding: 8px 0; }
   .nav__links a {
-    color: #1f2022; } }
+    color: #1f2022; }
+  .header-container {
+    background: url(../images/circle-text.png) no-repeat;
+    background-position: 310px 300px;
+    background-size: 100px; }
+  .header-container__heading {
+    width: 60%;
+    padding: 10px 100px;
+    position: relative;
+    margin-top: 320px; } }
 
 .about {
   background: #f6f6f6; }
@@ -737,8 +745,7 @@ header {
   float: left;
   width: 15%; }
 
-.test,
-.test {
+.small-blog {
   float: left;
   width: calc(75% - 20px);
   margin-left: 20px; }
@@ -1138,7 +1145,7 @@ textarea:focus {
       line-height: 32px;
       margin-bottom: 40px;
       text-align: center; }
-  .info .info__container__img img {
+  .info__container__img img {
     margin-bottom: 50px;
     width: 100%; }
   .gallery__item {

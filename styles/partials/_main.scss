@@ -1,4 +1,6 @@
-// about
+// HOME PAGE START HERE
+
+// HOME-about start
 .about {
     background: #f6f6f6;
 
@@ -21,15 +23,16 @@
         }
     }
 }
+// HOME-about end
 
-// full width image
+// HOME-full width image start
 .full-width-img {
     width: 100%;
     display: block;
 }
+// HOME-full width image end
 
-// features
-
+// HOME-features start
 .features__flex {
     display: flex;
     flex-wrap: wrap;
@@ -73,9 +76,9 @@
 .features__container:nth-child(1) {
     margin-bottom: 60px;
 }
+// HOME-features end
 
-// article
-
+// HOME-articles start
 .articles__container {
     display: flex;
     flex-wrap: wrap;
@@ -176,9 +179,9 @@
                 380px 20px 0 $primaryColor,
                 400px 20px 0 $primaryColor;
 }
+// HOME-articles end
 
-// info
-
+// HOME-info start
 .info {
     background: #f6f6f6;
     position: relative;
@@ -215,9 +218,9 @@
     box-shadow: 20px 20px 0 #227284;
     display: block;
 }
+// HOME-info end
 
-// gallery
-
+// HOME-gallery start
 .gallery {
     &__item {
         float: left;
@@ -233,9 +236,13 @@
         margin-right: 0px;
     }
 }
+// HOME-gallery end
+
+// HOME PAGE ENDS HERE
 
 // BLOG PAGE STARTS HERE
 
+// BLOG-aside start
 .body-other {
     background: #f6f6f6;
 }
@@ -290,7 +297,9 @@
     @include primaryFont(3.2rem, normal);
     margin-bottom: 20px;
 }
+// BLOG-aside end
 
+// BLOG-main start
 .blog {
     flex: 1 1 100%;
     padding-left: 40px;
@@ -326,15 +335,14 @@
     width: 15%;
 }
 
-.test,
-.test  {
+.small-blog  {
     float: left;
     width: calc(75% - 20px);
     margin-left: 20px;
 }
+// BLOG-main end
 
-// blog form
-
+// BLOG-form start
 input:focus,
 textarea:focus {
     outline: none !important;
@@ -385,10 +393,10 @@ textarea:focus {
     text-align: center;
     margin-top: 20px;
 }
+// BLOG-form end
 // BLOG END
 
 // CONTACT PAGE STARTS
-
 .contact-container {
     display: flex;
     padding: 100px 0;
@@ -430,11 +438,12 @@ textarea:focus {
     @include primaryFont(2.3rem, normal);
     text-transform: lowercase;
 }
+// CONTACT PAGE ENDS
 
 
-// MEDIA QUERIES
-
+// ALL MAIN MEDIA QUERIES
 @media(max-width: 1100px) {
+// home 1100px media start
     .about {
         background: #f6f6f6;
         text-align: center;
@@ -495,129 +504,128 @@ textarea:focus {
         width: 100%;
         z-index: -20;
 
-    &__flex {
-        display: block;
-        padding: 150px 0 100px 0;
-    }
-
-    &__container__content {
-        padding-left: 0px;
-        text-align: center;
-
-        &__title {
-            @include primaryFont(4.2rem, normal);
-            text-align: left;
-        }
-
-        &__text {
-            @include secondaryFont;
-            margin-bottom: 40px;
-            text-align: left;
-        }
-
-        &__btn {
-            @include globalBtn;
-        }
-    }     
-}
-        .info__container__img img {
-            box-shadow: 20px 20px 0 #227284;
+        &__flex {
             display: block;
-            float: left;
-            margin-right: 50px;
-            margin-bottom: 20px;
+            padding: 150px 0 100px 0;
         }
 
-        .info__flex {
-            padding: 100px 0 100px 0;
+        &__container__content {
+            padding-left: 0px;
+            text-align: center;
 
-        }
+            &__title {
+                @include primaryFont(4.2rem, normal);
+                text-align: left;
+            }
 
-        .gallery {
-            &__item {
-            margin: 100px 20px;
+            &__text {
+                @include secondaryFont;
+                margin-bottom: 40px;
+                text-align: left;
+            }
+
+            &__btn {
+                @include globalBtn;
+            }
+        }     
+    }
+
+    .info__container__img img {
+        box-shadow: 20px 20px 0 #227284;
+        display: block;
+        float: left;
+        margin-right: 50px;
+        margin-bottom: 20px;
+    }
+
+    .info__flex {
+        padding: 100px 0 100px 0;
+
+    }
+
+    .gallery {
+        &__item {
+        margin: 100px 20px;
+    }
+}
+// home 1100px media end
+
+// blog 1100px media start
+    .blog {
+        padding-left: 0px;
+    }
+
+    .main-blog-flex {
+        flex-direction: column;
+
+        &__aside {
+            flex: 1 1 100%;
+
+            &__container--about {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            &__container--text {
+                text-align: center;
+                flex: 1 1 40%;
+                margin: 0 20px;
+            }
+
+            &__container--img {
+                margin: 0 auto;
+                flex: 0 1 40%;
+            }
+
+            &__container--recent {
+                text-align: center;
+                margin-bottom: 20px;
+            }
         }
     }
 
- // BLOG MEDIA
+    .aside-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+// blog 1100px media end
 
- .blog {
-     padding-left: 0px;
- }
+// contact 1100px media begins
+    .contact-container {
+        flex-direction: column;
+    }
 
-.main-blog-flex {
-    flex-direction: column;
+    .contact-container__aside {
+        text-align: center;
+    }
 
-    &__aside {
+    .contact-container__aside p:first-of-type {
+        margin: 20px 0;
+    }
+
+    .social-aside {
         flex: 1 1 100%;
+        margin-bottom: 40px;
+    }
 
-        &__container--about {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-        }
+    .global-form {
+        flex: 1 1 100%;    
+    }
 
-        &__container--text {
-            text-align: center;
-            flex: 1 1 40%;
-            margin: 0 20px;
-        }
+    .contact-form {
+        padding-left: 0px;
+    }
 
-        &__container--img {
-            margin: 0 auto;
-            flex: 0 1 40%;
-        }
-
-        &__container--recent {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    .fab {
+        padding: 0 10px;
     }
 }
-
-.aside-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-// blog media end
-
-// contact media begins
-// CONTACT PAGE STARTS
-
-.contact-container {
-    flex-direction: column;
-}
-
-.contact-container__aside {
-    text-align: center;
-}
-
-.contact-container__aside p:first-of-type {
-    margin: 20px 0;
-}
-
-.social-aside {
-    flex: 1 1 100%;
-    margin-bottom: 40px;
-}
-
-.global-form {
-    flex: 1 1 100%;    
-}
-
-.contact-form {
-    padding-left: 0px;
-}
-
-.fab {
-    padding: 0 10px;
-}
-// contact ends
-}
+// contact 1100px media ends
 
 @media (max-width: 900px) {
+// home 900px media start
    .articles__container {
         display: flex;
         flex-direction: column;
@@ -663,15 +671,16 @@ textarea:focus {
     .articles__container__img--building {
         order: 3;
     }
-
 }
+// home 900px media end
 
 @media (max-width: 700px) {
+// home 700px media start
     .features__flex {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-}
+    }   
 
     .features {
         padding: 50px 0;
@@ -712,13 +721,12 @@ textarea:focus {
                 text-align: center;
             }
         }
+    }
         
     .info__container__img img {
             margin-bottom: 50px;
             width: 100%;
         }
-
-    }
 
     .gallery {
         &__item {
@@ -736,8 +744,10 @@ textarea:focus {
         width: 100%;
     }
 }
+// home 700px media end
 
 @media (max-width: 500px) {
+// blog 500px media start
     .main-blog-flex {
 
         &__aside {
@@ -755,6 +765,7 @@ textarea:focus {
         font-size: 1.6rem;
     }
 }
+// blog 500px media end
 
 
 
