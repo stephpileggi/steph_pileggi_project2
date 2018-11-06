@@ -10,6 +10,9 @@
     <title>Harper</title>
 </head>
 <body>
+<!-- Allows users the ability to get to the main content for your site -->
+    <a href="#maincontent" class="skip-link">Skip to main content.</a>
+<!-- header start -->
     <header>
         <div class="wrapper">
             <nav class="nav">
@@ -29,17 +32,21 @@
             </div>
         </div>
     </header>
-    <main>
+<!-- header end -->
+<!-- main start -->
+    <main id="maincontent">
         <section class="about clearfix">
-            <div class="about__container wrapper">
-                <h2 class="about__container__title">Who's harper?</h2>
-                <p class="about__container__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare condimentum. Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex, porttitor nec iaculis at, consectetur vel turpis.</p>
-                <a href="#" class="about__container__btn">Find out more</a>
+            <div class="wrapper">
+                <div class="about__container">
+                    <h2 class="about__container__title">Who's harper?</h2>
+                    <p class="about__container__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare condimentum. Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex, porttitor nec iaculis at, consectetur vel turpis.</p>
+                    <a href="#" class="about__container__btn">Find out more</a>
+                </div>
             </div>
         </section>
 
         <img src="images/home-image-2.jpg" class="full-width-img" alt="Wide close up of a pink building">
-
+<!-- features -->
         <section class="features">
             <div class="features__flex wrapper">
                 <div class="features__container">
@@ -75,7 +82,7 @@
                 </div>
             </div>
         </section>
-
+<!-- articles -->
         <section class="articles">
             <div class="wrapper">
                 <div class="articles__container">
@@ -102,7 +109,7 @@
                 </div>
             </div>
         </section>
-
+<!-- info -->
         <section class="info">
             <div class="info__flex wrapper">
                 <div class="info__container__img">
@@ -111,11 +118,11 @@
                 <div class="info__container__content">
                     <h2 class="info__container__content__title">Harper's journey</h2>
                     <p class="info__container__content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis.</p>
-                    <a href="#" class="info__container__content__btn">Find out more</a>
+                    <a href="index.html" class="info__container__content__btn">Find out more</a>
                 </div>
             </div>
         </section>
-
+<!-- gallery -->
         <section class="gallery">
             <div class="wrapper clearfix">
                 <img src="images/home-image-6.jpg" class="gallery__item" alt="Side of a pink house">
@@ -124,8 +131,11 @@
             </div>
         </section>
     </main>
+<!-- main end -->
+<!-- footer start -->
     <footer class="footer">
         <p class="footer__copyright">Copyright &copy; 2018 HackerYou</p>
     </footer>
+<!-- footer end -->
 </body>
 </html>

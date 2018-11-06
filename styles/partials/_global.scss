@@ -23,6 +23,7 @@ $fontColor: #171717;
     @include primaryFont(2rem, 29px);
     background: $accentColor;
     padding: 10px 33px;
+    display: inline-block;
 }
 
 
@@ -38,12 +39,37 @@ body {
 ul, li {
 	padding: 0;
 	margin: 0;
-	list-style: none;
 }
 
 a {
     text-decoration: none;
     cursor: pointer;
+}
+
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+.visuallyhidden:not(:focus):not(:active) {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     margin: -1px;
+     border: 0;
+     padding: 0;
+     white-space: nowrap;
+     clip-path: inset(100%);
+     clip: rect(0 0 0 0);
+     overflow: hidden;
 }
 
 // typography styles

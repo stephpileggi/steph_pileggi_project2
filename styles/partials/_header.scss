@@ -6,30 +6,6 @@ header {
     min-height: 650px;
 }
 
-.nav__links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px 0;
-}
-
-.nav__item {
-    margin: 0 2.5%;
-    
-    &__link {
-        @include primaryFont(2rem, 29px);
-    }
-
-    &--featured {
-        font-size: 4rem;
-    }
-
-}
-
-.nav__item a:hover {
-    color: #f6f6f6;
-}
-
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -61,6 +37,38 @@ header {
         margin-top: 320px;
 
 }
+
+// OTHER HEADERS
+
+.blog-header {
+    background: url(../images/blog-image-1.jpg) no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+    min-height: 400px;
+    position: relative;
+}
+
+.contact-header {
+    background: url(../images/contact-image-1.jpg) no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+    min-height: 400px;
+    position: relative;
+}
+
+.other-header h1 {
+    @include primaryFont(8rem, 92px);
+}
+
+.other-nav {
+    background: $primaryColor;
+}
+
+.other-header-content {
+    position: absolute;
+    bottom: -35px;
+}
+
 
 // MEDIA QUERIES
 
@@ -101,22 +109,14 @@ header {
     header {
         background: url(../images/home-image-1-resize.jpg) no-repeat center center;
         width: 100%;
+        height: 55vh;
+        min-height: 430px;
     }
 
     h1 {
         @include primaryFont(8rem, 92px);
-        color: rgba(246, 246, 246, 0.5);
+        color: rgba(246, 246, 246, 0.6);
     }
-
-    // .header-container {
-    //     background: url(../images/circle-text.png) no-repeat;
-    //     background-position: 310px 170px;
-    //     background-size: 100px;
-
-    //     &__heading {
-    //         margin-top: 190px;
-    //     }
-    // }
 
     .header-content {
         display: flex;
@@ -124,6 +124,19 @@ header {
 
         &__heading {
             padding: 0px 0px;
+            align-self: flex-end;
+            margin-top: 400px;
+            min-height: 50vh;
+        }
+    }
+
+    .header-container {
+        background: url(../images/circle-text.png) no-repeat;
+        background-position: 300px 215px;
+        background-size: 100px;
+
+        &__heading {
+            margin-top: 230px;
         }
     }
 
@@ -150,8 +163,8 @@ header {
 }
 
 @media (max-width: 700px) {
-    .nav__item--featured {
-        display: none;
-    }
+    // .nav__item--featured {
+    //     display: none;
+    // }
 }
 
